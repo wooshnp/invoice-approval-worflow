@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0" version="29.3.4">
+  <diagram name="Página-1" id="07Ezo0j7SXZ9yzD3tWcW">
+    <mxGraphModel dx="2864" dy="1139" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LTL9nLefqEicYcLrCroZ-6" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="LTL9nLefqEicYcLrCroZ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=130;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CLI INPUT&lt;br&gt;mvn spring-boot:run --ammount --department --requiresManagerApproval" vertex="1">
+          <mxGeometry height="40" width="410" x="150" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-9" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="LTL9nLefqEicYcLrCroZ-7" value="delegates to">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-4" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ApprovalWorkflowApplication" vertex="1">
+          <mxGeometry height="100" width="280" x="245" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-39" parent="LTL9nLefqEicYcLrCroZ-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="creates invoice instances and prints out the result" vertex="1">
+          <mxGeometry height="70" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-15" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LTL9nLefqEicYcLrCroZ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-27" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LTL9nLefqEicYcLrCroZ-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-7" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="WorkflowService" vertex="1">
+          <mxGeometry height="90" width="290" x="245" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-8" parent="LTL9nLefqEicYcLrCroZ-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="triggers a invoice request that will activate the workflow, it will also trigger a notification and returns a result" vertex="1">
+          <mxGeometry height="60" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-10" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="RuleRepository (JPA)" vertex="1">
+          <mxGeometry height="90" width="280" x="100" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-11" parent="LTL9nLefqEicYcLrCroZ-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="queries to match the a certain set of rules (fig1)" vertex="1">
+          <mxGeometry height="60" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-13" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Rule (Entity)" vertex="1">
+          <mxGeometry height="130" width="150" x="180" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-14" parent="LTL9nLefqEicYcLrCroZ-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id : uuid&lt;br&gt;minAmount : int&lt;br&gt;maxAmount : int&lt;br&gt;departmenType : enum&lt;br&gt;..." vertex="1">
+          <mxGeometry height="100" width="150" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-16" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.402;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" target="LTL9nLefqEicYcLrCroZ-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-40" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="LTL9nLefqEicYcLrCroZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-17" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="NotificationService" vertex="1">
+          <mxGeometry height="130" width="150" x="480" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-18" parent="LTL9nLefqEicYcLrCroZ-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="it will resolve the correct sender" vertex="1">
+          <mxGeometry height="100" width="150" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-19" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ApprovalResult&amp;nbsp;&lt;br&gt;(probably a record)" vertex="1">
+          <mxGeometry height="110" width="200" x="660" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-35" parent="LTL9nLefqEicYcLrCroZ-19" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="message : String&lt;br&gt;senderType: ...&lt;br&gt;..." vertex="1">
+          <mxGeometry height="80" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-21" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="InvoiceRequest&amp;nbsp;&lt;br&gt;(probably a record)" vertex="1">
+          <mxGeometry height="130" width="200" x="660" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-22" parent="LTL9nLefqEicYcLrCroZ-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;amount: big decimal&lt;/div&gt;&lt;div&gt;departmentType: enum&lt;/div&gt;&lt;div&gt;requiresManagerApproval: boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-23" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.02;entryY=0.168;entryDx=0;entryDy=0;entryPerimeter=0;" target="LTL9nLefqEicYcLrCroZ-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-24" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.014;entryY=0.585;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657.1999999999998" y="438.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-28" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=130;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SlackNotificationSender" vertex="1">
+          <mxGeometry height="50" width="150" x="400" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-31" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=130;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmailNotificationSender" vertex="1">
+          <mxGeometry height="50" width="140" x="610" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-37" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=130;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="INotificationSender" vertex="1">
+          <mxGeometry height="50" width="150" x="480" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-41" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.43;entryY=1.053;entryDx=0;entryDy=0;entryPerimeter=0;" target="LTL9nLefqEicYcLrCroZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-44" connectable="0" parent="LTL9nLefqEicYcLrCroZ-41" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="implements" vertex="1">
+          <mxGeometry relative="1" x="-0.1779" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-42" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.708;entryY=1.053;entryDx=0;entryDy=0;entryPerimeter=0;" target="LTL9nLefqEicYcLrCroZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-43" connectable="0" parent="LTL9nLefqEicYcLrCroZ-42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="implements" vertex="1">
+          <mxGeometry relative="1" x="0.0367" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-45" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ApprovalRequest (Entity)&lt;br&gt;(thinking on audit logs)" vertex="1">
+          <mxGeometry height="130" width="200" x="-20" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-46" parent="LTL9nLefqEicYcLrCroZ-45" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id : uuid&lt;br&gt;rule id : uuid&lt;br&gt;approver_id: uuid&lt;br&gt;sent_at : timestamp&lt;br&gt;..." vertex="1">
+          <mxGeometry height="100" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LTL9nLefqEicYcLrCroZ-47" edge="1" parent="1" source="LTL9nLefqEicYcLrCroZ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="LTL9nLefqEicYcLrCroZ-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
