@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - include:
+      file: changes/001-create-workflow-table.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/002-create-approver-table.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/003-create-rule-table.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/004-create-approval-request-table.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/005-seed-initial-data.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/006-unique-active-workflow.sql
+      relativeToChangelogFile: true

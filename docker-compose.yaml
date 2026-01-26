@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:17.6
+    ports:
+      - "5432:5432"
+    container_name: invoice-approval-workflow-postgres
+    environment:
+      POSTGRES_DB: approval_workflow
+      POSTGRES_USER: aw_user
+      POSTGRES_PASSWORD: aw_password
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aw_user -d approval_workflow"]
+      start_period: 5s
+      interval: 2s
+      timeout: 1s
+      retries: 5
+
+volumes:
+  postgres_data:
+    driver: local
