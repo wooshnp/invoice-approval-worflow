@@ -15,8 +15,7 @@ import lombok.Setter;
 @Setter
 public class ApprovalRequestEntity {
 
-  @Id
-  private UUID id;
+  @Id private UUID id;
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "rule_id", nullable = false)

@@ -27,10 +27,11 @@ class NotificationServiceTest {
     when(slackSender.getChannel()).thenReturn(NotificationChannel.SLACK);
 
     var service = new NotificationService(List.of(emailSender, slackSender));
-    clearInvocations(emailSender, slackSender); // Clear invocations from setup (the ones coming from the constructor)
+    clearInvocations(
+        emailSender,
+        slackSender); // Clear invocations from setup (the ones coming from the constructor)
     var approver = new ApproverEntity();
-    var invoice =
-        new InvoiceRequest(new BigDecimal("15000.00"), Department.MARKETING, false);
+    var invoice = new InvoiceRequest(new BigDecimal("15000.00"), Department.MARKETING, false);
 
     service.send(NotificationChannel.EMAIL, approver, invoice);
 
@@ -45,8 +46,7 @@ class NotificationServiceTest {
     when(slackSender.getChannel()).thenReturn(NotificationChannel.SLACK);
     var service = new NotificationService(List.of(slackSender));
     var approver = new ApproverEntity();
-    var invoice =
-        new InvoiceRequest(new BigDecimal("15000.00"), Department.MARKETING, false);
+    var invoice = new InvoiceRequest(new BigDecimal("15000.00"), Department.MARKETING, false);
 
     assertThatThrownBy(() -> service.send(NotificationChannel.EMAIL, approver, invoice))
         .isInstanceOf(IllegalArgumentException.class)

@@ -15,8 +15,7 @@ import lombok.Setter;
 @Setter
 public class RuleEntity {
 
-  @Id
-  private UUID id;
+  @Id private UUID id;
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "workflow_id", nullable = false)

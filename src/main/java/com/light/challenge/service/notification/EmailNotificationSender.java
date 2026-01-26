@@ -8,21 +8,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailNotificationSender implements NotificationSender {
 
-    @Override
-    public void send(ApproverEntity approver, InvoiceRequest invoice) {
-        System.out.println(
-                "Sending approval request via Email to "
-                        + approver.getEmail()
-                        + " ("
-                        + approver.getName()
-                        + ") for invoice: amount="
-                        + invoice.amount()
-                        + ", department="
-                        + invoice.department());
-    }
+  @Override
+  public void send(ApproverEntity approver, InvoiceRequest invoice) {
+    System.out.println(
+        "Sending approval request via Email to "
+            + approver.getEmail()
+            + " ("
+            + approver.getName()
+            + ") for invoice: amount="
+            + invoice.amount()
+            + ", department="
+            + invoice.department());
+  }
 
-    @Override
-    public NotificationChannel getChannel() {
-        return NotificationChannel.EMAIL;
-    }
+  @Override
+  public NotificationChannel getChannel() {
+    return NotificationChannel.EMAIL;
+  }
 }

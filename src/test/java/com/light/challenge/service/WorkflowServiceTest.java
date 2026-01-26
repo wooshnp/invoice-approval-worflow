@@ -6,7 +6,6 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.light.challenge.domain.dto.ApprovalResult;
 import com.light.challenge.domain.dto.InvoiceRequest;
 import com.light.challenge.domain.entity.ApproverEntity;
 import com.light.challenge.domain.entity.RuleEntity;
@@ -42,7 +41,8 @@ class WorkflowServiceTest {
 
   @InjectMocks private WorkflowService workflowService;
 
-  @Captor private ArgumentCaptor<com.light.challenge.domain.entity.ApprovalRequestEntity> auditCaptor;
+  @Captor
+  private ArgumentCaptor<com.light.challenge.domain.entity.ApprovalRequestEntity> auditCaptor;
 
   @Test
   @DisplayName("sends notification and saves audit when rule matches")
@@ -61,8 +61,7 @@ class WorkflowServiceTest {
     rule.setApprover(approver);
     rule.setNotificationChannel(NotificationChannel.SLACK);
 
-    var invoice =
-        new InvoiceRequest(new BigDecimal("15000.00"), Department.OTHER, false);
+    var invoice = new InvoiceRequest(new BigDecimal("15000.00"), Department.OTHER, false);
 
     when(workflowRepository.findActiveWorkflow()).thenReturn(Optional.of(workflow));
     when(ruleRepository.findRulesByWorkflowId(workflowId)).thenReturn(List.of(rule));
@@ -95,8 +94,7 @@ class WorkflowServiceTest {
     var workflowId = UUID.randomUUID();
     workflow.setId(workflowId);
 
-    var invoice =
-        new InvoiceRequest(new BigDecimal("15000.00"), Department.OTHER, false);
+    var invoice = new InvoiceRequest(new BigDecimal("15000.00"), Department.OTHER, false);
 
     when(workflowRepository.findActiveWorkflow()).thenReturn(Optional.of(workflow));
     when(ruleRepository.findRulesByWorkflowId(workflowId)).thenReturn(List.of());

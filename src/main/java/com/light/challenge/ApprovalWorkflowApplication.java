@@ -85,8 +85,7 @@ public class ApprovalWorkflowApplication implements CommandLineRunner {
         "\nUsage: java -jar approval-workflow.jar --amount=<amount> --department=<department> --managerApproval=<true|false>");
     System.out.println("\nArguments:");
     System.out.println("  --amount=<value>           Invoice amount (required)");
-    System.out.println(
-        "  --department=<value>       Department: MARKETING, OTHER (required)");
+    System.out.println("  --department=<value>       Department: MARKETING, OTHER (required)");
     System.out.println(
         "  --managerApproval=<value>  Whether manager approval is required: true or false (optional, default: false)");
     System.out.println("\nExample:");

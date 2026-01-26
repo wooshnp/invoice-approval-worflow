@@ -6,5 +6,4 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ApprovalRequestRepository extends CrudRepository<ApprovalRequestEntity, UUID> {
-}
+public interface ApprovalRequestRepository extends CrudRepository<ApprovalRequestEntity, UUID> {}

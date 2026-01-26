@@ -13,8 +13,7 @@ import lombok.Setter;
 @Setter
 public class ApproverEntity {
 
-  @Id
-  private UUID id;
+  @Id private UUID id;
 
   @Enumerated(EnumType.STRING)
   @Column(nullable = false, length = 50)

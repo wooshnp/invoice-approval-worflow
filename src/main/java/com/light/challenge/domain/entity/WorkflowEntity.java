@@ -14,8 +14,7 @@ import lombok.Setter;
 @Setter
 public class WorkflowEntity {
 
-  @Id
-  private UUID id;
+  @Id private UUID id;
 
   @Column(nullable = false, length = 100)
   private String name;
